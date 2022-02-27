@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+// application.php
+
+require __DIR__.'/vendor/autoload.php';
+
+use GetWith\CoffeeMachine\Console\PrintTableCommand;
+use GetWith\CoffeeMachine\Console\MakeDrinkCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+$application->add(new MakeDrinkCommand());
+$application->add(new PrintTableCommand());
+
+$application->run();
