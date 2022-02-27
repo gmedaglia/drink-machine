@@ -62,7 +62,7 @@ class MakeDrinkCommand extends Command
 
             $order = new DrinkOrder($drink, $money);
 
-            $output->writeln($order->toString());
+            $output->writeln($order);
 
             $this->updateData($drink);
 

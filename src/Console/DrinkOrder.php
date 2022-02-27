@@ -14,7 +14,7 @@ class DrinkOrder
         }
     }
 
-    public function toString(): string
+    public function __toString(): string
     {
         $text = "You have ordered a {$this->drink->getType()}";
 
